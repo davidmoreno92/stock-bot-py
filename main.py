@@ -59,7 +59,6 @@ while True:
         URL = f"https://www.pccomponentes.com/listado/ajax?idFilters%5B%5D=7793&idFilters%5B%5D=7501&idFilters%5B%5D=7498&idFilters%5B%5D=7504&page={i}&order=relevance&gtmTitle=Tarjetas%20Gr%C3%A1ficas%20GeForce%20RTX%203080%20Series%20GeForce%20RTX%203070%20Series%20GeForce%20RTX%203090%20Series&idFamilies%5B%5D=6"
         items.extend(scrapThis(URL))
 
-    print(len(items))
     if len(items) > 0 :
         for item in items:
             itemData = generateData(item)
