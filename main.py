@@ -14,7 +14,7 @@ print("Checking if there is stock available in PCC for RTX 3060, 3070, 3080 or 3
 def scrapThis(urlToScrap):
     resp = scraper.get(urlToScrap)
     soup = BeautifulSoup(resp.content, "html.parser")
-    return soup.find_all("div", class_=['disponibilidad-inmediata', 'disponibilidad-moderada', 'disponibilidad-baja', 'disponibilidad-nula'])
+    return soup.find_all("div", class_=['disponibilidad-inmediata', 'disponibilidad-moderada', 'disponibilidad-baja'])
 
 def generateData(item):
     product = dict()
